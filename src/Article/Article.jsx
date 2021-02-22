@@ -24,10 +24,8 @@ const Article = () => {
                     <p>Lady Liberty was a gift from France to the United States to celebrate the centennial of their nation's independence -- although, somewhat awkwardly, she arrived a decade too late. Nevertheless, President Grover Cleveland formally unveiled
                         her in <time datetime="1886">1886</time>.</p>
                     <p>Since then, the statue has served as a symbol of hope and possibility for many people who entered the United States as immigrants via neighboring Ellis Island.</p>
-                    <p>
-                        <q>The original torch is a beautiful object of art and exemplifies the American ideals of freedom and democracy,</q> says John Piltzecker, superintendent of the Statue of Liberty National Monument. That symbolic spirit inspired the
-                        decision to inscribe these famous lines on the statue 's pedestal:
-                    </p>
+                    <p><q>The original torch is a beautiful object of art and exemplifies the American ideals of freedom and democracy,</q> says John Piltzecker, superintendent of the Statue of Liberty National Monument. That symbolic spirit inspired the
+                        decision to inscribe these famous lines on the statue 's pedestal:</p>
                     <blockquote>Give me your tired, your poor<br /> Your huddled masses yearning to breathe free.</blockquote>
                     <p>In <time datetime="2017">2017</time>, nearly 4.5 million people visited Liberty Island.</p>
                     <p>When completed, the Statue of Liberty Museum will be 26,000 square feet of history, inspiration and deeper analysis of the statue's symbolism both in the US and around the world.</p>
