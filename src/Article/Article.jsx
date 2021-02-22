@@ -6,15 +6,9 @@ const Article = () => {
             <article>
                 <header>
                     <h1>The Statue of Liberty's torch heads to new museum</h1>
-                    <address>
-                        by Kate Farley
-                        (<a href="mailto:kate.farley@nytimes.com"
-                    >kate.farley@nytimes.com</a
-                    >)
-                    </address>
+                    <address>by Kate Farley (<a href="mailto:kate.farley@nytimes.com">kate.farley@nytimes.com</a>)</address>
                     <time datetime="2018-11-22">November 22, 2018</time>
                 </header>
-
                 <div>
                     <p>The Statue of Liberty's original torch is getting a new home.</p>
                     <p>Made of copper and gold so that it would shine bright, the first torch took a beating from the weather and was replaced by a replica in 1984. It's been stored in the statue's pedestal ever since.</p>
@@ -23,7 +17,6 @@ const Article = () => {
                     <p><q>Although it is not one of the most difficult things we have ever moved,</q> says Douglas Phelps, who oversaw the relocation of the torch,
                         <q>it is certainly the most important.</q></p>
                 </div>
-
                 <section>
                     <h3>The history of the Statue of Liberty</h3>
                     <p>Not only is the Statue of Liberty the symbol of New York City, she is also a UNESCO World Heritage site under the designation of <em>Outstanding Universal Value</em>.</p>
