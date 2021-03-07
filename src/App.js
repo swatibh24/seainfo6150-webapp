@@ -1,43 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
-import DynamicArticle from "./DynamicArticle/DynamicArticle.jsx";
+import React, {useEffect, useState} from "react";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
+import DynamicArticle from "./DynamicArticle/DynamicArticle";
+import ArticleList from "./ArticleList/ArticleList";
 import { isEmpty } from "lodash";
+import WelcomePage from "./DynamicArticle/WelcomePage";
 
 function App() {
   const [fetchedData, setFetchedData] = useState({});
-
   useEffect(() => {
     const fetchData = async () => {
-      // performs a GET request
-      const response = await fetch("http://demo1390455.mockable.io/articles");
+      const response = await fetch(
+          "http://demo1390455.mockable.io/articles"
+      );
       const responseJson = await response.json();
       setFetchedData(responseJson);
     };
-
     if (isEmpty(fetchedData)) {
       fetchData();
     }
   }, [fetchedData]);
 
-  return isEmpty(fetchedData) ? null : (
-    <div className="App">
-      <Switch>
-        <Route exact path={`/articlelist`}></Route>
-        <Route
-          path={`/articlelist/:slug`}
-          render={({ match }) => {
-            // getting the parameters from the url and passing
-            // down to the component as props
-            console.log("this slug", match.params.slug);
-            return <div>Component</div>;
-          }}
-        />
-        <Route>
-          <DynamicArticle article={Object.values(fetchedData)[1]} />
-        </Route>
-      </Switch>
-    </div>
+  return isEmpty(fetchedData) ? <div>You have no data!</div> : (
+      <div className="App">
+        <Switch>
+          <Route exact path={`/articleList`}>
+            <ArticleList articles={Object.values(fetchedData)} />
+          </Route>
+          <Route exact path='/articleList/:slug' render={routerProps => {
+            const slug = routerProps.match.params.slug;
+            const [data, setData] = Object.values(fetchedData).filter(item=>item.slug==slug);
+            return <DynamicArticle {...routerProps} props={{slug}} article={data}/>;}}/>
+          <Route><WelcomePage/></Route>
+        </Switch>
+      </div>
   );
 }
-
 export default App;
