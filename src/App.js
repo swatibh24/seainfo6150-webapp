@@ -20,10 +20,7 @@ function App() {
     }
   }, [fetchedData]);
 
-  let displayContent;
-
-  isEmpty(fetchedData) ? displayContent = <div>You have no data!</div>:
-    displayContent = (
+  return isEmpty(fetchedData) ? <div>You have no data!</div> : (
         <div className="App">
           <Switch>
             <Route path="/" exact component={WelcomePage}></Route>
@@ -37,12 +34,6 @@ function App() {
           </Switch>
         </div>
     );
-  
-  return (
-      <section>
-        {displayContent}
-      </section>
-  );
 };
 
 
