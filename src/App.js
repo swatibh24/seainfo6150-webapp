@@ -20,19 +20,30 @@ function App() {
     }
   }, [fetchedData]);
 
-  return isEmpty(fetchedData) ? <div>You have no data!</div> : (
-      <div className="App">
-        <Switch>
-          <Route exact path={`/articleList`}>
-            <ArticleList articles={Object.values(fetchedData)} />
-          </Route>
-          <Route exact path='/articleList/:slug' render={routerProps => {
-            const slug = routerProps.match.params.slug;
-            const [data, setData] = Object.values(fetchedData).filter(item=>item.slug==slug);
-            return <DynamicArticle {...routerProps} props={{slug}} article={data}/>;}}/>
-          <Route><WelcomePage/></Route>
-        </Switch>
-      </div>
+  let displayContent;
+
+  isEmpty(fetchedData) ? displayContent = <div>You have no data!</div>:
+    displayContent = (
+        <div className="App">
+          <Switch>
+            <Route path="/" exact component={WelcomePage}></Route>
+            <Route exact path="/articleList">
+              <ArticleList articles={Object.values(fetchedData)} />
+            </Route>
+            <Route exact path='/articleList/:slug' render={routerProps => {
+              const slug = routerProps.match.params.slug;
+              const [data, setData] = Object.values(fetchedData).filter(item=>item.slug==slug);
+              return <DynamicArticle {...routerProps} props={{slug}} article={data}/>;}}/>
+          </Switch>
+        </div>
+    );
+  
+  return (
+      <section>
+        {displayContent}
+      </section>
   );
-}
+};
+
+
 export default App;
