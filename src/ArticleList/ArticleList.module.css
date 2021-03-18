@@ -1,0 +1,11 @@
+.article_list {
+    border-radius: 25px;
+    background-color: #999999;
+    box-shadow: 0.3em 0.3em 1em red;
+    border: 2px dashed #58595b;
+    margin: 50px auto;
+    height: auto;
+    width:90%;
+    font-family: Sans-serif; 
+} 
+
