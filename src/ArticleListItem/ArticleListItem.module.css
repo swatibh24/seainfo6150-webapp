@@ -1,0 +1,38 @@
+.list_item {
+    border: 2px solid #ca0000;
+    margin: 2% 2% 3% 2%;
+    border-radius: 25px;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    height: auto;
+    width:auto;
+    background-image: linear-gradient(
+    to right,
+    #b61919,
+    white 20%
+  );
+}
+
+h2 {
+    margin-bottom: 0;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 25px;
+    color: #ca0000;
+}
+
+p {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+time {
+    font-weight: bold;
+    font-size: 15px;
+}
+
