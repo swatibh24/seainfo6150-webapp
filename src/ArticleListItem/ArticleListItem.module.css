@@ -10,9 +10,16 @@
     width:auto;
     background-image: linear-gradient(
     to right,
-    #b61919,
+    #ff0000,
     white 20%
   );
+}
+
+.link{
+    font-size: 20px;
+    color: #ca0000;
+    font-weight: bold;
+    padding-top: 20px;
 }
 
 h2 {

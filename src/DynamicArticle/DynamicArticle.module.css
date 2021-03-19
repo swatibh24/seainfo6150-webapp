@@ -1,0 +1,23 @@
+.item {
+    border: 2px dotted #ca0000;
+    margin: 2% 2% 3% 2%;
+    border-radius: 25px;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    height: auto;
+    width:auto;
+    box-shadow: 5px 5px 5px 5px red;
+}
+
+.btn {
+    color: #ca0000;
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: larger;
+
+}
+
+
+

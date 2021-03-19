@@ -20,7 +20,7 @@ function App() {
     }
   }, [fetchedData]);
 
-  return isEmpty(fetchedData) ? <div>You have no data!</div> : (
+  return isEmpty(fetchedData) ? null : (
     <div className="App">
       <Switch>
         <Route
