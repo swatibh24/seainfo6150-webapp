@@ -5,11 +5,11 @@ import ArticleListItem from "../ArticleListItem/ArticleListItem.jsx";
 const ArticleList = (props) => {
   return (
     <div>
-      <ul>
+      <div>
         {props.articles.map((article) => (
           <ArticleListItem article={article} key={article.slug} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

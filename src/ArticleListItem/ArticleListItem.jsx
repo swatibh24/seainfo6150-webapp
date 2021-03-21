@@ -6,12 +6,12 @@ import {Link} from "react-router-dom";
 
 const ArticleListItem = (props) => {
   return (
-    <div className={styles.list_item}>
+      <div className={styles.list_item}>
       <article className={styles.article_text}>
-        <Link className={styles.link} to= {`/articlelist/${props.article.slug}`}>{props.article.title}</Link>
+          <Link className={styles.link} to= {`/articlelist/${props.article.slug}`}>{props.article.title}</Link>
         <ArticleTextToggleButton article={props.article} />
       </article>
-    </div>
+      </div>
   );
 };
 

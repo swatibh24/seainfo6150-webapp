@@ -16,7 +16,6 @@ class ArticleTextToggleButton extends Component {
       onClick=() => {
           this.setState({clicked: !this.state.clicked});
       }
-    
 
       render() {
         return (
