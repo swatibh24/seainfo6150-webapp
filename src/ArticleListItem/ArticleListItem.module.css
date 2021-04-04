@@ -10,9 +10,7 @@
     justify-content: space-between;
     display:flex;
     flex-flow: column wrap;
-    /*
-    grid-template-columns: 1fr 1fr ;
-    */
+
 }
 .wrapper {
     display: flex;
