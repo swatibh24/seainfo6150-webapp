@@ -42,3 +42,37 @@
   .link {
     color: #c00;
   }
+
+  @media screen and (min-width: 400px) {
+    .container {
+          background-image: linear-gradient(to right, rgba(204, 0, 0, 0.5), #eee 20%);
+          padding: 10px;
+    }
+    .title {
+      font-size: 22px;
+    }
+
+  }
+
+  @media screen and (min-width: 800px) {
+    .container {
+          background-image: linear-gradient(to right, rgba(204, 0, 0, 0.5), #eee 20%);
+          padding: 10px;
+    }
+    .title {
+      font-size: 25px;
+    }
+
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      background-image: linear-gradient(to right, rgba(204, 0, 0, 0.5), #eee 20%);
+          border: 1px solid #c00;
+          padding: 10px;
+    }
+    .title {
+      font-size: 28px;
+    }
+
+  }

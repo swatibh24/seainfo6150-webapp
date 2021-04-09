@@ -10,3 +10,31 @@
   list-style-type: none;
   padding: 15px;
 }
+
+@media (min-width: 300px) {
+  .container {
+      display: grid;
+      grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 850px) {
+  .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
