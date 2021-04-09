@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./HTMLText.module.css";
 
 const HTMLText = (props) => {
-  return <div className={styles.articleText} dangerouslySetInnerHTML={{ __html: props.text }} />;
+  return <div dangerouslySetInnerHTML={{ __html: props.text }} />;
 };
 
 HTMLText.propTypes = {

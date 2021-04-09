@@ -4,9 +4,9 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px 5px rgba(204, 0, 0, 0.5);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
     list-style-type: none;
     padding: 15px;
-    display:grid;
   }
 
 .back {
@@ -17,8 +17,51 @@
     font-weight: bold;
     margin-bottom: 20px;
 }
-
-p{
-
-display:grid;
+.content{
+    column-count: 4;
 }
+
+
+@supports not (display: grid) {
+    .articleText div {
+        column-count: 4;
+    }
+}
+
+@supports (display: grid) {
+    .content {
+        column-count: 4;
+    }
+
+    @media only print {
+        .content {
+            font-size: 300px;
+        }
+    }
+
+    @media (min-width: 1100px) {
+        .content {
+            column-count: 1;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .content {
+            column-count: 1;
+        }
+    }
+
+    @media screen and (min-width: 350px) {
+        .content {
+            column-count: 1;
+        }
+
+    }
+
+    @media (min-width: 900px) {
+        .content {
+            column-count: 4
+        }
+    }
+}
+

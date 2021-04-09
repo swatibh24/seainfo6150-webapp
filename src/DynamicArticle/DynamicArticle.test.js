@@ -1,6 +1,5 @@
 import React from "react";
 import DynamicArticle from "./DynamicArticle";
-import ArticleImage from "../ArticleImage/ArticleImage";
 
 describe("DynamicArticle tests", () => {
     const article = {
